@@ -63,13 +63,6 @@ export default class Blank extends React.Component {
               this.setState({ Switch_83: nextChecked })
             }
           />
-          <Image
-            source={{
-              uri:
-                "https://crowdbotics-slack-dev.s3.amazonaws.com/media/project_component_resources/2_5PdFYcN.jpg"
-            }}
-            style={styles.Image_84}
-          />
         </View>
       </View>
     </View>
@@ -89,6 +82,5 @@ const styles = StyleSheet.create({
     alignContent: "space-between"
   },
   Switch_81: { alignSelf: "flex-start" },
-  Switch_83: { alignSelf: "flex-start" },
-  Image_84: { width: 100, height: 100 }
+  Switch_83: { alignSelf: "flex-start" }
 })
