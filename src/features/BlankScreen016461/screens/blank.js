@@ -46,6 +46,7 @@ export default class Blank extends React.Component {
           this.setState({ DateTimePicker_9: selectedDate })
         }
       />
+      <Text>Sample text content</Text>
     </View>
   )
 }
@@ -59,5 +60,6 @@ const styles = StyleSheet.create({
   Button_6: {},
   Text_7: {},
   Text_8: {},
-  DateTimePicker_9: {}
+  DateTimePicker_9: {},
+  Text_10: {}
 })
