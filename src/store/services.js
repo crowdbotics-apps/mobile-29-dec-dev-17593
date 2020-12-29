@@ -1,4 +1,9 @@
 import axios from "axios"
+const newConnector = axios.create({
+  baseURL:
+    "https://crowdbotics-slack-dev.herokuapp.com/dashboard/app/17593/storyboard/16461/",
+  headers: { Accept: "application/json", "Content-Type": "application/json" }
+})
 const mobiledecAPI = axios.create({
   baseURL: "https://mobile-29-dec-dev-17593.botics.co/",
   headers: { Accept: "application/json", "Content-Type": "application/json" }
