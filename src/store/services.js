@@ -8,6 +8,28 @@ const mobiledecAPI = axios.create({
   baseURL: "https://mobile-29-dec-dev-17593.botics.co/",
   headers: { Accept: "application/json", "Content-Type": "application/json" }
 })
+function api_v1_bgfmhfm_list(action) {
+  return mobiledecAPI.get(`/api/v1/bgfmhfm/`)
+}
+function api_v1_bgfmhfm_create(action) {
+  return mobiledecAPI.post(`/api/v1/bgfmhfm/`, null, { data: action.data })
+}
+function api_v1_bgfmhfm_read(action) {
+  return mobiledecAPI.get(`/api/v1/bgfmhfm/${action.id}/`)
+}
+function api_v1_bgfmhfm_update(action) {
+  return mobiledecAPI.put(`/api/v1/bgfmhfm/${action.id}/`, null, {
+    data: action.data
+  })
+}
+function api_v1_bgfmhfm_partial_update(action) {
+  return mobiledecAPI.patch(`/api/v1/bgfmhfm/${action.id}/`, null, {
+    data: action.data
+  })
+}
+function api_v1_bgfmhfm_delete(action) {
+  return mobiledecAPI.delete(`/api/v1/bgfmhfm/${action.id}/`)
+}
 function api_v1_customtext_list(action) {
   return mobiledecAPI.get(`/api/v1/customtext/`)
 }
@@ -90,6 +112,12 @@ function rest_auth_user_partial_update(action) {
   return mobiledecAPI.patch(`/rest-auth/user/`, null, { data: action.data })
 }
 export const apiService = {
+  api_v1_bgfmhfm_list,
+  api_v1_bgfmhfm_create,
+  api_v1_bgfmhfm_read,
+  api_v1_bgfmhfm_update,
+  api_v1_bgfmhfm_partial_update,
+  api_v1_bgfmhfm_delete,
   api_v1_customtext_list,
   api_v1_customtext_read,
   api_v1_customtext_update,

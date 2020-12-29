@@ -2,6 +2,75 @@ import { put, call, all, spawn, takeEvery } from "redux-saga/effects"
 import { apiService } from "./services"
 import * as types from "./constants"
 import * as actions from "./actions"
+function* api_v1_bgfmhfm_listWorker(action) {
+  try {
+    const result = yield call(apiService.api_v1_bgfmhfm_list, action)
+    yield put(actions.api_v1_bgfmhfm_listSucceeded(result, action))
+  } catch (err) {
+    yield put(actions.api_v1_bgfmhfm_listFailed(err, action))
+  }
+}
+function* api_v1_bgfmhfm_listWatcher() {
+  yield takeEvery(types.API_V1_BGFMHFM_LIST, api_v1_bgfmhfm_listWorker)
+}
+function* api_v1_bgfmhfm_createWorker(action) {
+  try {
+    const result = yield call(apiService.api_v1_bgfmhfm_create, action)
+    yield put(actions.api_v1_bgfmhfm_createSucceeded(result, action))
+  } catch (err) {
+    yield put(actions.api_v1_bgfmhfm_createFailed(err, action))
+  }
+}
+function* api_v1_bgfmhfm_createWatcher() {
+  yield takeEvery(types.API_V1_BGFMHFM_CREATE, api_v1_bgfmhfm_createWorker)
+}
+function* api_v1_bgfmhfm_readWorker(action) {
+  try {
+    const result = yield call(apiService.api_v1_bgfmhfm_read, action)
+    yield put(actions.api_v1_bgfmhfm_readSucceeded(result, action))
+  } catch (err) {
+    yield put(actions.api_v1_bgfmhfm_readFailed(err, action))
+  }
+}
+function* api_v1_bgfmhfm_readWatcher() {
+  yield takeEvery(types.API_V1_BGFMHFM_READ, api_v1_bgfmhfm_readWorker)
+}
+function* api_v1_bgfmhfm_updateWorker(action) {
+  try {
+    const result = yield call(apiService.api_v1_bgfmhfm_update, action)
+    yield put(actions.api_v1_bgfmhfm_updateSucceeded(result, action))
+  } catch (err) {
+    yield put(actions.api_v1_bgfmhfm_updateFailed(err, action))
+  }
+}
+function* api_v1_bgfmhfm_updateWatcher() {
+  yield takeEvery(types.API_V1_BGFMHFM_UPDATE, api_v1_bgfmhfm_updateWorker)
+}
+function* api_v1_bgfmhfm_partial_updateWorker(action) {
+  try {
+    const result = yield call(apiService.api_v1_bgfmhfm_partial_update, action)
+    yield put(actions.api_v1_bgfmhfm_partial_updateSucceeded(result, action))
+  } catch (err) {
+    yield put(actions.api_v1_bgfmhfm_partial_updateFailed(err, action))
+  }
+}
+function* api_v1_bgfmhfm_partial_updateWatcher() {
+  yield takeEvery(
+    types.API_V1_BGFMHFM_PARTIAL_UPDATE,
+    api_v1_bgfmhfm_partial_updateWorker
+  )
+}
+function* api_v1_bgfmhfm_deleteWorker(action) {
+  try {
+    const result = yield call(apiService.api_v1_bgfmhfm_delete, action)
+    yield put(actions.api_v1_bgfmhfm_deleteSucceeded(result, action))
+  } catch (err) {
+    yield put(actions.api_v1_bgfmhfm_deleteFailed(err, action))
+  }
+}
+function* api_v1_bgfmhfm_deleteWatcher() {
+  yield takeEvery(types.API_V1_BGFMHFM_DELETE, api_v1_bgfmhfm_deleteWorker)
+}
 function* api_v1_customtext_listWorker(action) {
   try {
     const result = yield call(apiService.api_v1_customtext_list, action)
@@ -288,6 +357,12 @@ function* rest_auth_user_partial_updateWatcher() {
 }
 export default function* rootSaga() {
   const sagas = [
+    api_v1_bgfmhfm_listWatcher,
+    api_v1_bgfmhfm_createWatcher,
+    api_v1_bgfmhfm_readWatcher,
+    api_v1_bgfmhfm_updateWatcher,
+    api_v1_bgfmhfm_partial_updateWatcher,
+    api_v1_bgfmhfm_deleteWatcher,
     api_v1_customtext_listWatcher,
     api_v1_customtext_readWatcher,
     api_v1_customtext_updateWatcher,

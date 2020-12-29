@@ -356,3 +356,80 @@ export const rest_auth_user_partial_updateFailed = (response, starter) => ({
   response,
   starter
 })
+export const api_v1_bgfmhfm_list = () => ({ type: types.API_V1_BGFMHFM_LIST })
+export const api_v1_bgfmhfm_listSucceeded = (response, starter) => ({
+  type: types.API_V1_BGFMHFM_LIST_SUCCEEDED,
+  response,
+  starter
+})
+export const api_v1_bgfmhfm_listFailed = (response, starter) => ({
+  type: types.API_V1_BGFMHFM_LIST_FAILED,
+  response,
+  starter
+})
+export const api_v1_bgfmhfm_create = data => ({
+  type: types.API_V1_BGFMHFM_CREATE,
+  data
+})
+export const api_v1_bgfmhfm_createSucceeded = (response, starter) => ({
+  type: types.API_V1_BGFMHFM_CREATE_SUCCEEDED,
+  response,
+  starter
+})
+export const api_v1_bgfmhfm_createFailed = (response, starter) => ({
+  type: types.API_V1_BGFMHFM_CREATE_FAILED,
+  response,
+  starter
+})
+export const api_v1_bgfmhfm_read = () => ({ type: types.API_V1_BGFMHFM_READ })
+export const api_v1_bgfmhfm_readSucceeded = (response, starter) => ({
+  type: types.API_V1_BGFMHFM_READ_SUCCEEDED,
+  response,
+  starter
+})
+export const api_v1_bgfmhfm_readFailed = (response, starter) => ({
+  type: types.API_V1_BGFMHFM_READ_FAILED,
+  response,
+  starter
+})
+export const api_v1_bgfmhfm_update = data => ({
+  type: types.API_V1_BGFMHFM_UPDATE,
+  data
+})
+export const api_v1_bgfmhfm_updateSucceeded = (response, starter) => ({
+  type: types.API_V1_BGFMHFM_UPDATE_SUCCEEDED,
+  response,
+  starter
+})
+export const api_v1_bgfmhfm_updateFailed = (response, starter) => ({
+  type: types.API_V1_BGFMHFM_UPDATE_FAILED,
+  response,
+  starter
+})
+export const api_v1_bgfmhfm_partial_update = data => ({
+  type: types.API_V1_BGFMHFM_PARTIAL_UPDATE,
+  data
+})
+export const api_v1_bgfmhfm_partial_updateSucceeded = (response, starter) => ({
+  type: types.API_V1_BGFMHFM_PARTIAL_UPDATE_SUCCEEDED,
+  response,
+  starter
+})
+export const api_v1_bgfmhfm_partial_updateFailed = (response, starter) => ({
+  type: types.API_V1_BGFMHFM_PARTIAL_UPDATE_FAILED,
+  response,
+  starter
+})
+export const api_v1_bgfmhfm_delete = () => ({
+  type: types.API_V1_BGFMHFM_DELETE
+})
+export const api_v1_bgfmhfm_deleteSucceeded = (response, starter) => ({
+  type: types.API_V1_BGFMHFM_DELETE_SUCCEEDED,
+  response,
+  starter
+})
+export const api_v1_bgfmhfm_deleteFailed = (response, starter) => ({
+  type: types.API_V1_BGFMHFM_DELETE_FAILED,
+  response,
+  starter
+})
