@@ -43,6 +43,17 @@ class CustomText(models.Model):
     def field(self):
         return "title"
 
+    def __str__(self):
+        return self.title
+
+    @property
+    def api(self):
+        return f"/api/v1/customtext/{self.id}/"
+
+    @property
+    def field(self):
+        return "title"
+
 
 class HomePage(models.Model):
     """
@@ -68,3 +79,20 @@ class HomePage(models.Model):
     @property
     def field(self):
         return "body"
+
+    @property
+    def api(self):
+        return f"/api/v1/homepage/{self.id}/"
+
+    @property
+    def field(self):
+        return "body"
+
+
+class Bgfmhfm(models.Model):
+    "Generated Model"
+    jhgjhgj = models.BigIntegerField()
+    bcbvccbvc = models.PositiveSmallIntegerField(
+        null=True,
+        blank=True,
+    )
