@@ -34,16 +34,26 @@ export default class Blank extends React.Component {
         value={this.state.Switch_2}
         onValueChange={nextChecked => this.setState({ Switch_2: nextChecked })}
       />
-      <Image
-        source={{
-          uri:
-            "https://crowdbotics-slack-dev.s3.amazonaws.com/media/project_component_resources/2_5PdFYcN.jpg"
-        }}
-        style={styles.Image_3}
-      />
       <View>
-        <View style={styles.View_5} />
-        <View />
+        <View style={styles.View_5}>
+          <Image
+            source={{
+              uri:
+                "https://crowdbotics-slack-dev.s3.amazonaws.com/media/project_component_resources/2_5PdFYcN.jpg"
+            }}
+            style={styles.Image_3}
+          />
+        </View>
+        <View>
+          <Text>Sample text content</Text>
+          <Image
+            source={{
+              uri:
+                "https://crowdbotics-slack-dev.s3.amazonaws.com/media/project_component_resources/2_5PdFYcN.jpg"
+            }}
+            style={styles.Image_9}
+          />
+        </View>
       </View>
     </View>
   )
@@ -52,8 +62,10 @@ export default class Blank extends React.Component {
 const styles = StyleSheet.create({
   View_1: {},
   Switch_2: { alignSelf: "flex-start" },
-  Image_3: { width: 100, height: 100 },
   View_4: {},
   View_5: { width: 200, height: 100 },
-  View_6: {}
+  Image_3: { width: 100, height: 100 },
+  View_6: {},
+  Text_8: {},
+  Image_9: { width: 100, height: 100 }
 })
