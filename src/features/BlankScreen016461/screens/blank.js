@@ -35,6 +35,10 @@ export default class Blank extends React.Component {
         value={this.state.TextInput_4}
         onChangeText={nextValue => this.setState({ TextInput_4: nextValue })}
       />
+      <Button title="Press me!" onPress={() => alert("Pressed!")} />
+      <Button title="Press me!" onPress={() => alert("Pressed!")} />
+      <Text>Sample text content</Text>
+      <Text>Sample text content</Text>
     </View>
   )
 }
@@ -43,5 +47,9 @@ const styles = StyleSheet.create({
   View_1: {},
   Button_2: {},
   Text_3: {},
-  TextInput_4: {}
+  TextInput_4: {},
+  Button_5: {},
+  Button_6: {},
+  Text_7: {},
+  Text_8: {}
 })
