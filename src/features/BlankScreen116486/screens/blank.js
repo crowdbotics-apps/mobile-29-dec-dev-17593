@@ -24,7 +24,7 @@ export default class Blank extends React.Component {
     }
   }
 
-  state = { TextInput_4: "" }
+  state = { TextInput_4: "", DateTimePicker_6: new Date("") }
 
   render = () => (
     <View>
@@ -36,6 +36,13 @@ export default class Blank extends React.Component {
         onChangeText={nextValue => this.setState({ TextInput_4: nextValue })}
       />
       <Text>Sample text content</Text>
+      <DateTimePicker
+        showIcon={false}
+        date={this.state.DateTimePicker_6}
+        onDateChange={selectedDate =>
+          this.setState({ DateTimePicker_6: selectedDate })
+        }
+      />
     </View>
   )
 }
@@ -45,5 +52,6 @@ const styles = StyleSheet.create({
   Text_2: {},
   Button_3: {},
   TextInput_4: {},
-  Text_5: {}
+  Text_5: {},
+  DateTimePicker_6: {}
 })
